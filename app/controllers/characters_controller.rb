@@ -22,6 +22,7 @@ class CharactersController < ApplicationController
 
   def edit
     @character = Character.find(params[:id])
+    @house = @character.house
   end
 
   def update
@@ -33,7 +34,7 @@ class CharactersController < ApplicationController
   def destroy
     @character = Character.find(params[:id])
     @character.destroy
-    redirect_to house_character_path(@house, @character)
+    redirect_to "/houses"
   end
 
   private
