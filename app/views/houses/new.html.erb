@@ -1,0 +1,8 @@
+<h1>Create New House!</h1>
+
+
+<%= form_for @house do |f| %>
+  Name: <%= f.text_field :name %><br />
+
+  <%= f.submit %>
+<% end %>

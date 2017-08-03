@@ -1,0 +1,9 @@
+<h1><%= @house.name %></h1>
+<%= link_to "New Character", new_house_character_path(@house) %>
+<% @house.characters.each do |character| %>
+  <div>
+    <h2>
+      <%= link_to character.name, [@house, character] %>
+    </h2>
+  </div>
+  <% end %>

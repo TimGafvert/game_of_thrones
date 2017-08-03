@@ -1,0 +1,8 @@
+<h1>Here are the characters</h1>
+<% @characters.each do |character| %>
+  <div>
+    <h2>
+      <%= link_to character.name, [@house, character] %>
+    </h2>
+  </div>
+  <% end %>
